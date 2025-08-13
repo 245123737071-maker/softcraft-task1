@@ -1,0 +1,18 @@
+/* Build a program that generates a random number and challenges the user to guess it.The program should prompt the user to input their guess,compare it to the generated number */
+
+import random
+n = random.randint(1, 100)
+
+print("Welcome to the Number Guessing Game!")
+print("I have selected a number between 1 and 100. Can you guess it?")
+
+while True:
+    i= int(input("Enter your guess: "))
+    
+    if i < n:
+        print("Too low! Try again.")
+    elif i > n:
+        print("Too high! Try again.")
+    else:
+        print(f"🎉 Congratulations! You guessed it right. The number was {n}")
+        break
